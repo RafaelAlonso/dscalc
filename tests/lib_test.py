@@ -41,3 +41,24 @@ def test_subtract():
     # deve ver se o que a gente consegue eh o esperado
     got = subtract(c,d)
     assert got == expected
+
+def test_multiply():
+    # escolhe inputs dessa funcao
+    a, b = 2, 2
+
+    # deve saber qual e o output
+    esperado = 4
+
+    # deve ver se o que a gente consegue eh o esperado
+    conseguiu = multiply(a,b)
+    assert conseguiu == esperado
+
+    # escolhe inputs dessa funcao
+    c, d = 0, 5
+
+    # deve saber qual e o output
+    expected = 0
+
+    # deve ver se o que a gente consegue eh o esperado
+    got = multiply(c,d)
+    assert got == expected
