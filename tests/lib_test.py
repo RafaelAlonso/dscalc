@@ -1,4 +1,4 @@
-from dscalc.lib import sum, subtract
+from dscalc.lib import sum, subtract, multiply
 
 def test_sum():
     # escolhe inputs dessa funcao

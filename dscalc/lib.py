@@ -5,6 +5,9 @@ def sum(a,b):
 def subtract(a,b):
     return a - b
 
+def multiply(a,b):
+    return a * b
+
 # so roda o codigo dentro do if se eu ESPECIFICAMENTE
 # mandei rodar esse arquivo
 if __name__ == '__main__':
