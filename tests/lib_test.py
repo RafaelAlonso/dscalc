@@ -1,19 +1,43 @@
-# -*- coding: UTF-8 -*-
+from dscalc.lib import sum, subtract
 
-# Import from standard library
-import os
-import dscalc
-import pandas as pd
-# Import from our lib
-from dscalc.lib import clean_data
-import pytest
+def test_sum():
+    # escolhe inputs dessa funcao
+    a, b = 2, 2
 
+    # deve saber qual e o output
+    esperado = 4
 
-def test_clean_data():
-    datapath = os.path.dirname(os.path.abspath(dscalc.__file__)) + '/data'
-    df = pd.read_csv('{}/data.csv.gz'.format(datapath))
-    first_cols = ['id', 'civility', 'birthdate', 'city', 'postal_code', 'vote_1']
-    assert list(df.columns)[:6] == first_cols
-    assert df.shape == (999, 142)
-    out = clean_data(df)
-    assert out.shape == (985, 119)
+    # deve ver se o que a gente consegue eh o esperado
+    conseguiu = sum(a,b)
+    assert conseguiu == esperado
+
+    # escolhe inputs dessa funcao
+    c, d = 5, 0
+
+    # deve saber qual e o output
+    expected = 5
+
+    # deve ver se o que a gente consegue eh o esperado
+    got = sum(c,d)
+    assert got == expected
+
+def test_subtract():
+    # escolhe inputs dessa funcao
+    a, b = 2, 2
+
+    # deve saber qual e o output
+    esperado = 0
+
+    # deve ver se o que a gente consegue eh o esperado
+    conseguiu = subtract(a,b)
+    assert conseguiu == esperado
+
+    # escolhe inputs dessa funcao
+    c, d = 0, 5
+
+    # deve saber qual e o output
+    expected = -5
+
+    # deve ver se o que a gente consegue eh o esperado
+    got = subtract(c,d)
+    assert got == expected
